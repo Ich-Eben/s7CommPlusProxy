@@ -7,7 +7,8 @@ Dieser proxy soll nur dazu dienen an die ausgehandelten Secrets der TLS Verbindu
 ## How to use
 Als erstes müssen diese zwei Zertifikat Dateien im Arbeitsverzeichnis der Anwendung erstellt werden `test.crt.pem` und `test.key.pem`.
 
-Das Zertifikat kann man sich am leichtesten mit dem Zertifikatsmanager im TIA Portal generieren. Des generierte Zertifikat anschließend als `.p12` Archiv mit privatem Schlüssel exportieren und mit Hilfe von OpenSSL die `.pem` Dateien erzeugen:
+Das Zertifikat kann man sich am leichtesten mit dem Zertifikatsmanager im TIA Portal generieren. Das generierte Zertifikat anschließend als `.p12` Archiv mit privatem Schlüssel exportieren und mit Hilfe von OpenSSL die `.pem` Dateien erzeugen:
+
 `openssl pkcs12 -in "test_X.509 Certificate_3.p12" -out test.crt.pem -clcerts -nokeys`
 
 `openssl pkcs12 -in "test_X.509 Certificate_3.p12" -out test.key.pem -nocerts -nodes`
